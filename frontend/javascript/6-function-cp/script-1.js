@@ -10,8 +10,7 @@ function reverseString(str) {
     return str.split('').reverse().join('');
 }
 
-// take input from the user
-// const string = prompt('Masukan teks: ');
+const string = prompt('Masukan teks: ');
 
 const result = reverseString("yanda agil marfani");
 console.log(result);
