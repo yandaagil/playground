@@ -11,12 +11,19 @@
 
 function checkPalindrome(string) {
     // TODO: answer here
+    const str = string.toLowerCase();
+    const temp = str.split('').reverse().join('');
+    if (temp === str) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 // masukan teks
-const string = prompt('Enter a string: ');
+// const string = prompt('Enter a string: ');
 
 // memanggil fungsi palindrom
-const value = checkPalindrome(string);
+const value = checkPalindrome("Kasur ini rusak");
 
 console.log(value);

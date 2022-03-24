@@ -1,9 +1,21 @@
 // Menukar variabel a dan b dengan operator matematika
 
-let a = prompt('Masukan variabel pertama: ');
-let b = prompt('Masukan variabel kedua: ');
-
 // TODO: answer here
+const prompt = require("prompt");
+prompt.start();
 
-console.log(`Nilai a setelah ditukar: ${a}`);
-console.log(`Nilai b setelah ditukar: ${b}`);
+prompt.get(["a", "b"], (err, res) => {
+    let a = res.a;
+    let b = res.b;
+
+    console.log(`Nilai a sebelum ditukar: ${a}`);
+    console.log(`Nilai b sebelum ditukar: ${b}`);
+
+    let temp;
+    temp = a;
+    a = b;
+    b = temp;
+
+    console.log(`Nilai a setelah ditukar: ${a}`);
+    console.log(`Nilai b setelah ditukar: ${b}`);
+});

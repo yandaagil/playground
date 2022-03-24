@@ -9,3 +9,14 @@
 const score = parseInt(prompt("Masukan nilai: "));
 
 // TODO: answer here
+if (score >= 91 && score <= 100) {
+    console.log("A");
+} else if (score >= 71) {
+    console.log("B");
+} else if (score >= 61) {
+    console.log("C");
+} else if (score >= 51) {
+    console.log("D");
+} else {
+    console.log("E");
+}
