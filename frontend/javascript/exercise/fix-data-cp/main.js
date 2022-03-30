@@ -36,11 +36,38 @@
 */
 
 function fixData(line) {
-  // TODO: answer here
+   // TODO: answer here
+   let sumVowel = 0;
+   let sumConsonant = 0; 
+   hasil = "";
+   var line = line.split("");
+   for (var i = 0; i < line.length; i++){
+      if (line[i] === "a" || line[i] === "i" || line[i] === "u" || line[i] === "e" || line[i] === "o") {
+         sumVowel++;
+      } else {
+         sumConsonant++;
+      }
+   }
+
+   for (var j = 0; j < line.length; j++) {
+      if (line[j] === "#") {
+         if (sumConsonant > sumVowel) {
+            hasil += "a";
+         } else if (sumConsonant < sumVowel) {
+            hasil += "b";
+         } else {
+            hasil += "c";
+         }
+      } else {
+         hasil += line[j];
+      }
+   }
+
+   return hasil;
 }
 
 console.log(fixData('aoi#fdg#ue'))
 console.log(fixData('eh#xyz#oi#'))
 console.log(fixData('#eui#bcl##'))
 
-module.exports = fixData
+// module.exports = fixData

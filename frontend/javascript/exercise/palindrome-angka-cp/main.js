@@ -8,10 +8,21 @@
 
 function angkaPalindrome(num) {
   // TODO: answer here
+  let numString = num.toString(); // mengubah angka menjadi string
+  for (let i = 0; i < numString.length; i++) {
+    let numStringReverse = numString.split("").reverse().join(""); // membalik string
+    if (numString === numStringReverse) {
+      return numString;
+    }
+    num++;
+    numString = num.toString();
+
+  }
+  
 }
 
 console.log(angkaPalindrome(10)); //11
 console.log(angkaPalindrome(17)); //22
 console.log(angkaPalindrome(175)); //181
 
-module.exports = angkaPalindrome
+// module.exports = angkaPalindrome

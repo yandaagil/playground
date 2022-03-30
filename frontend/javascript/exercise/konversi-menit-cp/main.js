@@ -1,5 +1,5 @@
 /**
- * Konversikan menit pada paramter menjadi satuan jam.
+ * Konversikan menit pada parameter menjadi satuan jam.
  * Misal: 
  * - 99 menjadi "1:39"
  * - 132 menjadi "2:12"
@@ -10,9 +10,13 @@
  */
 
 
-
 function konversiMenit(menit) {
-  // TODO: answer here
+  let hour = Math.floor(menit / 60);
+  let minute = menit % 60;
+  if (minute < 10){
+    return hour + ":0" + minute;
+  }
+  return hour + ":" + minute;
 }
 
 console.log(konversiMenit(61));
@@ -20,4 +24,4 @@ console.log(konversiMenit(94));
 console.log(konversiMenit(51));
 console.log(konversiMenit(187));
 
-module.exports = konversiMenit;
+// module.exports = konversiMenit;
